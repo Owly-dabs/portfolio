@@ -5,6 +5,7 @@ import { links } from "../data/links";
 import ProjectCard from "../components/ProjectCard";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import Navigation from "../components/Navigation";
+import profile from "../assets/profile.jpg";
 
 export default function Home() {
   return (
@@ -12,14 +13,14 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         {/* Animated background */}
         <div className="absolute inset-0 animated-gradient opacity-20" />
         <div className="absolute inset-0 bg-background" />
         
         {/* Floating elements */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-accent-500/10 rounded-full blur-xl animate-pulse-slow" />
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-secondary/10 rounded-full blur-xl animate-bounce-slow" />
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-secondary/40 rounded-full blur-xl animate-bounce-slow" />
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="fade-in-up">
@@ -27,7 +28,25 @@ export default function Home() {
             <div className="mb-6">
               <span className="text-accent-500 font-medium">👋 Hello, I'm</span>
             </div>
-            
+
+            {/* Profile Photo */}
+            <div className="mb-6 relative">
+              {/* Background gradient light */}
+              <div className="absolute inset-0 w-48 h-48 md:w-56 md:h-56 bg-gradient-to-br from-accent-500/60 via-secondary/60 to-transparent rounded-full blur-2xl mx-auto " />
+
+              {/* Background lights */}
+              <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent-500/60 rounded-full blur-xl animate-pulse-slow" />
+              <div className="absolute -bottom-4 -right-4 w-28 h-28 bg-secondary/25 rounded-full blur-xl animate-bounce-slow" />
+              <div className="absolute top-1/2 -left-8 w-20 h-20 bg-accent-500/20 rounded-full blur-lg animate-pulse" />
+              <div className="absolute top-1/2 -right-8 w-22 h-22 bg-secondary/20 rounded-full blur-lg animate-bounce-slow" />
+
+              <img
+                src={profile}
+                alt="Darryl Lim - Profile Photo"
+                className="w-48 h-48 md:w-56 md:h-56 rounded-full shadow-lg mx-auto fade-in-up object-cover relative z-10"
+              />
+            </div>
+
             {/* Name */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="gradient-text">Darryl Lim</span>
