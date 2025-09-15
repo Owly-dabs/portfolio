@@ -5,6 +5,8 @@ interface Testimonial {
   name: string;
   position: string;
   content: string;
+  image: string;
+  link: string;
 }
 
 interface Props {
@@ -61,17 +63,22 @@ export default function TestimonialCarousel({ testimonials }: Props) {
             </p>
             
             {/* Author info */}
-            <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 bg-gradient-to-r from-accent-500 to-secondary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-sm">
-                  {t.name.split(' ').map(n => n[0]).join('')}
-                </span>
-              </div>
+            <a
+              href={t.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-4 no-underline hover:underline hover:cursor-pointer"
+            >
+              <img
+                src={t.image}
+                alt={t.name}
+                className="w-12 h-12 rounded-full object-cover border-2 border-accent-500"
+              />
               <div>
                 <p className="text-foreground font-semibold">{t.name}</p>
                 <p className="text-muted-foreground text-sm">{t.position}</p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Navigation controls */}
