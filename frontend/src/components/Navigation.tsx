@@ -41,25 +41,25 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-foreground hover:text-accent-500 transition-colors duration-200"
+              className="bg-background text-foreground hover:text-accent-500 hover:bg-card transition-colors duration-200"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-foreground hover:text-accent-500 transition-colors duration-200"
+              className="bg-background text-foreground hover:text-accent-500 hover:bg-card transition-colors duration-200"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('projects')}
-              className="text-foreground hover:text-accent-500 transition-colors duration-200"
+              className="bg-background text-foreground hover:text-accent-500 hover:bg-card transition-colors duration-200"
             >
               Projects
             </button>
             <button
               onClick={() => scrollToSection('testimonials')}
-              className="text-foreground hover:text-accent-500 transition-colors duration-200"
+              className="bg-background text-foreground hover:text-accent-500 hover:bg-card transition-colors duration-200"
             >
               Testimonials
             </button>

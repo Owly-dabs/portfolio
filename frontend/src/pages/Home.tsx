@@ -268,7 +268,7 @@ export default function Home() {
       <footer className="py-8 border-t border-border">
         <div className="container mx-auto px-4 text-center">
           <p className="text-muted-foreground">
-            © 2024 Darryl Lim. Built with React & TypeScript.
+            © 2025 Darryl Lim. Built with React & TypeScript.
           </p>
         </div>
       </footer>
